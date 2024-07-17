@@ -3,7 +3,7 @@ provider "tls" {
 }
 
 data "external" "file_exists" {
-  program = ["./bash_scripts/check_file_exists.sh", ".${var.private_key_path}"]
+  program = ["${path.module}/bash_scripts/check_file_exists.sh", ".${var.private_key_path}"]
   query = {
     path = ".${var.private_key_path}"
   }

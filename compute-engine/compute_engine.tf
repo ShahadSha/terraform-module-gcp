@@ -118,7 +118,7 @@ resource "null_resource" "provision" {
   count = var.allocate_external_ip && var.create_additional_disk ? 1 : 0
 
   provisioner "file" {
-    source      = "./bash_scripts/mount.sh"
+    source      = "${path.module}/bash_scripts/mount.sh"
     destination = "/tmp/mount.sh"
     connection {
       type        = "ssh"
