@@ -6,8 +6,12 @@ terraform {
     }
   }
 }
+
+provider "tls" {
+}
+
 provider "google" {
-  credentials = file("/home/sha/Documents/prod1-1f.json")
+  credentials = file(var.credentials)
   project     = var.project_name
   region      = var.region
   zone        = var.zone
