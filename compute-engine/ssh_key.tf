@@ -1,6 +1,5 @@
-provider "tls" {
-
-}
+#provider "tls" {
+#}
 
 data "external" "file_exists" {
   program = ["${path.module}/bash_scripts/check_file_exists.sh", ".${var.private_key_path}"]
