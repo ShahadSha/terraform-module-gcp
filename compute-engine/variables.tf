@@ -53,6 +53,6 @@ variable "public_key_path" {
 variable "mount_point" {
   type = string
 }
-variable "credentials" {
+variable "credentials_path" {
   type = string
 }
